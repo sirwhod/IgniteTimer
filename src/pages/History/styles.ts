@@ -15,13 +15,19 @@ export const HistoryContainer = styled.div`
 
 export const HistoryList = styled.div`
   flex: 1;
-  overflow: auto;
   margin-top: 2rem;
+  max-height: 80%;
+  overflow: auto;
+
+  width: 100%;
 
   table {
     width: 100%;
     border-collapse: collapse;
+    overflow: auto;
     min-width: 600px;
+
+    height: 100%;
 
     th {
       background-color: ${(props) => props.theme['gray-600']};
@@ -58,6 +64,26 @@ export const HistoryList = styled.div`
         padding-right: 1.5rem;
       }
     }
+
+    tbody {
+      overflow: auto;
+      max-height: 80%;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(props) =>
+      props.theme['gray-600']}; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 4px solid ${(props) => props.theme['gray-800']}; /* creates padding around scroll thumb */
   }
 `
 

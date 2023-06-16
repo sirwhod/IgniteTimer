@@ -31,4 +31,18 @@ export const HeaderContainer = styled.header`
       }
     }
   }
+
+  @media (max-width: 767px) {
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    nav {
+      gap: 1rem;
+      a {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
 `

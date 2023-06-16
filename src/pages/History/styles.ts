@@ -11,12 +11,16 @@ export const HistoryContainer = styled.div`
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
   }
+
+  @media (max-width: 767px) {
+    padding: 1.5rem 0;
+  }
 `
 
 export const HistoryList = styled.div`
   flex: 1;
   margin-top: 2rem;
-  max-height: 80%;
+  max-height: 50%;
   overflow: auto;
 
   width: 100%;
@@ -26,8 +30,6 @@ export const HistoryList = styled.div`
     border-collapse: collapse;
     overflow: auto;
     min-width: 600px;
-
-    height: 100%;
 
     th {
       background-color: ${(props) => props.theme['gray-600']};
@@ -84,6 +86,15 @@ export const HistoryList = styled.div`
       props.theme['gray-600']}; /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
     border: 4px solid ${(props) => props.theme['gray-800']}; /* creates padding around scroll thumb */
+  }
+
+  @media (max-width: 767px) {
+    max-height: 60%;
+    table {
+      td {
+        width: 20%;
+      }
+    }
   }
 `
 
